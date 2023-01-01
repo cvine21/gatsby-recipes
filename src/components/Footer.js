@@ -2,8 +2,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer>
-      <h2>Footer</h2>
+    <footer className="page-footer">
+      <p>
+        &copy; 2023 <span>SumplyRecipes</span>. Built with{" "}
+        <a href="https://www.gatsbyjs.com/" target="_blank">
+          Gatsby
+        </a>
+      </p>
     </footer>
   );
 }
