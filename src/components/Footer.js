@@ -5,7 +5,7 @@ function Footer() {
     <footer className="page-footer">
       <p>
         &copy; 2023 <span>SumplyRecipes</span>. Built with{" "}
-        <a href="https://www.gatsbyjs.com/" target="_blank">
+        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
           Gatsby
         </a>
       </p>
