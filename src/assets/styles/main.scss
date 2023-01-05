@@ -737,7 +737,9 @@ button,
     &-list {
       grid-template-columns: 1fr 1fr;
     }
+  }
 
+  .recipe {
     &-img {
       height: 10rem;
     }
