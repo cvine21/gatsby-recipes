@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import AllRecipes from "../components/AllRecipes";
 import Layout from "../components/Layout";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <AllRecipes />
       </main>
     </Layout>
   );
