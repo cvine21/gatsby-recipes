@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { BsClock, BsClockHistory, BsPeople } from "react-icons/bs";
+import slugify from "slugify";
 
 import Layout from "../components/Layout";
 
@@ -19,11 +20,15 @@ function RecipeTemplate({ data }) {
   } = data;
   const imgPath = getImage(image);
 
-  const tagsList = tags.map((tag, i) => (
-    <Link key={i} to={`/${tag}`}>
-      {tag}
-    </Link>
-  ));
+  const tagsList = tags.map((tag, i) => {
+    const tagSlug = slugify(tag, { lower: true });
+
+    return (
+      <Link key={i} to={`/tags/${tagSlug}`}>
+        {tag}
+      </Link>
+    );
+  });
 
   const instructionsList = instructions.map((item, i) => (
     <div key={i} className="single-instruction">
