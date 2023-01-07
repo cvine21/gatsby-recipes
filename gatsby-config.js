@@ -12,6 +12,17 @@ require("dotenv").config({
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  siteMetadata: {
+    title: "Simply Recipes",
+    description: "Nice and clean recipes site",
+    author: "@cvine",
+    person: { name: "rafael", age: 23 },
+    simpleData: ["item 1", "item 2"],
+    complexData: [
+      { name: "rafael", age: 23 },
+      { name: "susan", age: 21 },
+    ],
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,

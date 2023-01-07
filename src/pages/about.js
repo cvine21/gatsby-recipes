@@ -4,6 +4,7 @@ import React from "react";
 
 import Layout from "../components/Layout";
 import RecipesList from "../components/RecipesList";
+import SEO from "../components/SEO";
 
 function About({ data }) {
   const {
@@ -62,5 +63,9 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <SEO title="About" />;
+}
 
 export default About;

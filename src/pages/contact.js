@@ -3,6 +3,7 @@ import React from "react";
 
 import Layout from "../components/Layout";
 import RecipesList from "../components/RecipesList";
+import SEO from "../components/SEO";
 
 function Contact({ data }) {
   const {
@@ -76,5 +77,9 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <SEO title="Contact" />;
+}
 
 export default Contact;

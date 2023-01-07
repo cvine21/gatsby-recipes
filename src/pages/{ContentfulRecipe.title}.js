@@ -5,6 +5,7 @@ import { BsClock, BsClockHistory, BsPeople } from "react-icons/bs";
 import slugify from "slugify";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 function RecipeTemplate({ data }) {
   const {
@@ -128,5 +129,16 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const {
+    contentfulRecipe: {
+      title,
+      description: { description },
+    },
+  } = data;
+
+  return <SEO title={title} description={description} />;
+}
 
 export default RecipeTemplate;

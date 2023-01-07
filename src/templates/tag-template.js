@@ -3,6 +3,7 @@ import React from "react";
 
 import Layout from "../components/Layout";
 import RecipesList from "../components/RecipesList";
+import SEO from "../components/SEO";
 
 function TagTemplate({ data, pageContext: { tag } }) {
   const {
@@ -39,5 +40,9 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ pageContext }) {
+  return <SEO title={pageContext.tag} />;
+}
 
 export default TagTemplate;

@@ -1,9 +1,11 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+
 import AllRecipes from "../components/AllRecipes";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
-export default function Home() {
+function Home() {
   return (
     <Layout>
       <main className="page">
@@ -27,3 +29,9 @@ export default function Home() {
     </Layout>
   );
 }
+
+export function Head() {
+  return <SEO title="Home" />;
+}
+
+export default Home;

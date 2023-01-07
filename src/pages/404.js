@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 function Error() {
   return (
@@ -12,6 +13,10 @@ function Error() {
       </main>
     </Layout>
   );
+}
+
+export function Head() {
+  return <SEO title="Error" />;
 }
 
 export default Error;

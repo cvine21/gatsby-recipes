@@ -1,6 +1,9 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
+import slugify from "slugify";
+
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import setupTags from "../utils/setupTags";
 
 function Tags({ data }) {
@@ -8,9 +11,10 @@ function Tags({ data }) {
 
   const content = tags.map((tag, i) => {
     const [tagName, tagCount] = tag;
+    const tagSlug = slugify(tagName, { lower: true });
 
     return (
-      <Link key={i} to={`/${tagName}`} className="tag">
+      <Link key={i} to={`/tags/${tagSlug}`} className="tag">
         <h5>{tagName}</h5>
         <p>{tagCount} recipe</p>
       </Link>
@@ -37,5 +41,9 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head() {
+  return <SEO title="Tags" />;
+}
 
 export default Tags;
